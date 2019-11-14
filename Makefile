@@ -10,7 +10,7 @@ update:
 	docker exec -it app /bin/sh -c 'php artisan migrate'
 
 migrate:
-    docker exec -it app /bin/sh -c 'php artisan migrate'
+	docker exec -it app /bin/sh -c 'php artisan migrate'
 
 console:
 	docker exec -it app /bin/sh
