@@ -12,6 +12,8 @@
 
 `make down` - set down all containers
 
-`make update` - update all dependencies
+`make update` - update all dependencies and run migrations
+
+`make migrate` - run migrations
 
 `make console` - move you into the app container 
