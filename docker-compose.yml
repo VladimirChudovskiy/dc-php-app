@@ -20,6 +20,9 @@ services:
     container_name: mysql
     restart: unless-stopped
     tty: true
+    volumes:
+      - ./dbdata:/dbdata
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
     ports:
       - "3306:3306"
     environment:
@@ -39,6 +42,7 @@ services:
     container_name: app
     volumes:
       - ./src:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     ports:
       - "9000:9000"
     networks:

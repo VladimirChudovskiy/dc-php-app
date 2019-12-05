@@ -14,3 +14,11 @@ migrate:
 
 console:
 	docker exec -it app /bin/sh
+
+
+dbup:
+	docker exec -it mysql /bin/sh -c 'mysql -u db_user -psecret db_name < /dbdata/dump.sql'
+
+dbdump:
+	docker exec -it mysql /bin/sh -c 'mysqldump -u db_user -psecret db_name > /dbdata/dump.sql'
+

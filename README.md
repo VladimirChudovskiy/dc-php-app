@@ -17,3 +17,19 @@
 `make migrate` - run migrations
 
 `make console` - move you into the app container 
+
+
+## Tips and tricks
+### Use ready database structure and data 
+If you want to use databases with some data you should follow next steps:
+1. Create folder `dbdata`.
+2. Put file with dump into that directory. File should have name `dump.sql`.
+3. Run `make dbup` command.
+When you stop working on the project and want to save db state for future follow next steps:
+1. Run `make dbdump` before `make down`.
+
+## Acknowledgement
+While I was creating this repository I used ideas of other developers and I want to say `thank you` to
+- Mohammad Shahgolzadeh https://github.com/m2sh
+- Serhii Lysak https://github.com/iihres
+- Other developer who share their knowledge
